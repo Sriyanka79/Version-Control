@@ -1,0 +1,78 @@
+Assignment_3
+
+Date:2023_09_11
+
+Name:Sriyanka_Nimali
+
+product=lambda x,y:x*y
+result=product(5,6)
+print(result) 
+30
+
+
+import math
+def circle_area(radius):
+    area = math.pi*radius**2
+    return area
+result = circle_area(10)
+print(result)
+314.1592653589793
+
+
+def calculator(x,y, operation):
+    if operation=='a': # Addition
+        return x+y
+    elif operation=='s': # Substraction
+        return x-y
+    elif operation=='m': # Multiplication
+        return x * y
+    elif operation=='d': # Division
+            if y !=0: #Check for division by zero
+                return x/y
+            else:
+                return"Division by zero is not allowed"
+    else:
+            return"Invalid operation"
+            # Test the function with (2,5,'d')to perform division
+result=calculator(2,5,'d')
+print(result) 
+# Output will be 0.4
+0.4
+
+
+class Rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+        
+    def area1(self):
+        return self.length*self.width
+r=Rectangle(5,10)
+
+# Calculate and print the area
+print(r.area1())
+# output will be 50
+50
+
+
+class Shape:
+    def area(self):
+        return 0
+
+class Square(Shape):
+    def area(self):
+        return self.length**2
+    
+    def describe(self):
+        return f"This is a:{self.name}"
+    
+# Create an instance of the Square class with name 'square' and set length to 5
+s= Square()
+s.name = 'square'
+s.length = 5
+    
+# print the area and description
+print(f"The area is :{s.area()}")
+print(s.describe())
+The area is :25
+This is a:square
